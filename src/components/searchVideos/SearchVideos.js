@@ -62,6 +62,7 @@ const SearchVideos = ( ) => {
     {searched.length > 0 && 
     
    <Swiper className="video__container"
+        createElements={true}
         loop= {true}
         autoplay={{
                     delay: 2000,
