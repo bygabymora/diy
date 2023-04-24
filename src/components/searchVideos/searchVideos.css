@@ -43,8 +43,8 @@
   position: relative;
 }
 .video__container{
-  width: 750px;
-  height: 350px;
+  width: 90%;
+  height: 400px;
   margin: 2%;
   
   
@@ -96,8 +96,8 @@
 /* For medium devices */
 @media screen and (max-width: 768px) {
   .video__container{
-    width: 300px;
-    height: auto;
+    width: 90%;
+    height: 250px;
     margin: 2%;
 
   }

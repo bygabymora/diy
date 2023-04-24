@@ -12,7 +12,7 @@
     order: 1;
     justify-content: center;
     width: 600px;
-    height: 350px;
+    height: auto;
     animation: profile__animate 8s ease-in-out infinite 1s;
 }
 
@@ -33,4 +33,11 @@
     font-size: var(--small-font-size);
     text-align: center;
     
+  }
+  @media screen and (max-width: 768px) {
+    .hero_img{
+        width: 300px;
+        height: auto; 
+    }
+
   }

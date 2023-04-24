@@ -68,16 +68,16 @@ const SearchVideos = ( ) => {
                     disableOnInteraction: false
                 }}
         grabCursor = {true}
-        spaceBetween={24}
         pagination={{
           clickable: true,
         }}
         breakpoints={{
           576: {
             slidesPerView: 1,
+            spaceBetween: 0,
           },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 48,
           },
         }}
@@ -85,28 +85,28 @@ const SearchVideos = ( ) => {
         
         >
     {videos.map((item, index) => (
-      <div className='shadow-2xl'>
-      <SwiperSlide className="video__card " key={item.id}>
-      <a
-          key={index}
-          href={`https://www.youtube.com/watch?v=${item.id}`}
-          className='video__link'
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img  src={item.thumbnail.url} alt={item.title} className='video__img' />
-          <div>
-          <h3 className="video__name">{item.title}</h3>
-          <br/>
-          <h2 className="video__sub_title">Views: {item.views}</h2>
-            <br/>
-    </div>
-  </a>
-  </SwiperSlide>
-  </div>
-    ))} 
-  </Swiper>
-}
+      <div>
+        <SwiperSlide className="video__card " key={item.id}>
+          <a
+              key={index}
+              href={`https://www.youtube.com/watch?v=${item.id}`}
+              className='video__link'
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img  src={item.thumbnail.url} alt={item.title} className='video__img' />
+              <div>
+              <h3 className="video__name">{item.title}</h3>
+              <br/>
+              <h2 className="video__sub_title">Views: {item.views}</h2>
+                <br/>
+              </div>
+          </a>
+        </SwiperSlide>
+        </div>
+          ))} 
+      </Swiper>
+    }
     </>
   )
 }
