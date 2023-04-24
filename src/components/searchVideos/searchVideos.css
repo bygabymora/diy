@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form__input{
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+    padding: 1%;
+    resize: none;
+    color: var( --title-color-dark);
+   
+  }
+  .add__new__application{
+    
+    font-size: var( --h1-font-size);
+    margin-top: auto;
+   }
+
+/* Swiper Class  */
+
+.swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--title-color) !important;
+}
+
+.swiper-slide:hover{
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+}  
+.video__card{
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0 ,0.1);
+  padding: 2%;
+  border-radius: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;  
+}
+.video__link{
+  text-decoration: none;
+  color: var(--title-color-dark);
+  position: relative;
+}
+.video__container{
+  width: 750px;
+  height: 350px;
+  margin: 2%;
+  
+  
+}
+.video__img{
+  width: 300px;
+  height: auto;
+  border-radius: 1.5rem;
+  margin-bottom: var(--mb-1);
+  margin-right: 1%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.video__name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--mb-0-25);
+  color: var(--title-color-dark);
+  text-align: center;
+}
+
+.video__description{
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.video__top{
+  display: flex;
+  justify-content: space-around;
+}
+.video__sub_title{
+  color: var(--text-color);
+  text-align: center;
+}
+.video__top div{
+  margin-top: 15px;
+  font-size: 9px;
+}
+.search__button{
+  display: inline-block;
+  background-color: var(--title-color-dark);
+  color: var(--container-color);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 5px;
+  font-size: var(--normal-font-size);
+}
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .video__container{
+    width: 300px;
+    height: auto;
+    margin: 2%;
+
+  }
+  .video__img{
+    width: 150px;
+    height: auto;
+  }
+
+}
