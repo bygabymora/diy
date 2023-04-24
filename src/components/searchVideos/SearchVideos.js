@@ -53,7 +53,7 @@ const SearchVideos = ( ) => {
     SwiperCore.use([Autoplay])
   return (
     <>
-    <div className=''>
+    <div className='container section'>
      <form onSubmit={handleSubmit} className='border rounded-lg shadow-md relative flex flex-col add__new__application section__title'>
         <input type="text" value={search} onChange={handleChange} className='w-full py-3 border form__input'/>
         <button type="submit" onClick={handleSubmit} className='search__button'>Search</button>
@@ -69,16 +69,17 @@ const SearchVideos = ( ) => {
                     disableOnInteraction: false
                 }}
         grabCursor = {true}
+        spaceBetween='2%'
         pagination={{
           clickable: true,
         }}
         breakpoints={{
           576: {
             slidesPerView: 1,
-            spaceBetween: 0,
+         
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 48,
           },
         }}
