@@ -84,24 +84,29 @@ const SearchVideos = ( ) => {
         modules={[Pagination]}
         
         >
-    {videos.map((item, index) => (
+    {videos.map((item, index) => 
+        (
       <div>
         <SwiperSlide className="video__card " key={item.id}>
-          <a
-              key={index}
-              href={`https://www.youtube.com/watch?v=${item.id}`}
-              className='video__link'
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img  src={item.thumbnail.url} alt={item.title} className='video__img' />
-              <div>
+          <div className="video__top">
+            <a
+                key={index}
+                href={`https://www.youtube.com/watch?v=${item.id}`}
+                className='video__link'
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img  src={item.thumbnail.url} alt={item.title} className='video__img' />
+            </a>
+          </div>
+          <div className='video__description'>
               <h3 className="video__name">{item.title}</h3>
               <br/>
               <h2 className="video__sub_title">Views: {item.views}</h2>
-                <br/>
-              </div>
-          </a>
+              <br/>
+          </div>
+          
+          
         </SwiperSlide>
         </div>
           ))} 
